@@ -1,10 +1,17 @@
 {
   "name": "mean-testing",
   "version": "0.1.0",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.8.3",
+    "mongo": "^0.1.0",
+    "mongojs": "^0.13.1",
+    "native-promise-only": "^0.7.6-a"
+  },
   "devDependencies": {
+    "expect.js": "^0.3.1",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^0.7.3",
+    "grunt-cli": "^0.1.13",
     "grunt-concurrent": "^0.5.0",
     "grunt-contrib-clean": "^0.5.0",
     "grunt-contrib-concat": "^0.4.0",
@@ -19,16 +26,22 @@
     "grunt-filerev": "^0.2.1",
     "grunt-google-cdn": "^0.4.0",
     "grunt-karma": "^0.8.3",
+    "grunt-mocha-cli": "^1.9.0",
     "grunt-newer": "^0.7.0",
     "grunt-ngmin": "^0.0.3",
     "grunt-svgmin": "^0.4.0",
     "grunt-usemin": "^2.1.1",
     "grunt-wiredep": "^1.7.0",
-    "jshint-stylish": "^0.2.0",
+    "jshint-stylish": "^0.4.0",
     "karma": "^0.12.21",
     "karma-jasmine": "^0.1.5",
+    "karma-mocha-reporter": "^0.2.8",
     "karma-phantomjs-launcher": "^0.1.4",
     "load-grunt-tasks": "^0.4.0",
+    "mocha": "^1.21.4",
+    "protractor": "^1.0.0",
+    "should": "^4.0.4",
+    "supertest": "^0.13.0",
     "time-grunt": "^0.3.1"
   },
   "engines": {
