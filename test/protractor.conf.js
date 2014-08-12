@@ -3,7 +3,7 @@
 
 exports.config = {
   chromeOnly: true,
-  chromeDriver: './node_modules/protractor/selenium/chromedriver',
+  chromeDriver: '../node_modules/protractor/selenium/chromedriver',
 
   // Capabilities to be passed to the webdriver instance.
   capabilities: {
@@ -12,7 +12,11 @@ exports.config = {
 
   // Spec patterns are relative to the current working directly when
   // protractor is called.
-  specs: ['test/e2e/**/*.spec.js'],
+  specs: ['./e2e/**/*.spec.js'],
+
+  baseUrl: 'http://localhost:9000',
+
+  rootElement: 'body',
 
   // Options to be passed to Jasmine-node.
   jasmineNodeOpts: {
