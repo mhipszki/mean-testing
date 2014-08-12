@@ -14,4 +14,8 @@ describe('Home page', function () {
     expect(page.navigationBar().isPresent()).toBe(true);
   });
 
+  it('should have a Register Phone button on the Navigation Bar', function() {
+    expect(page.registerPhoneButton().isPresent()).toBe(true);
+  });
+
 });

@@ -7,6 +7,10 @@ var page = function () {
   this.navigationBar = function () {
     return element(by.id('navigation-bar'));
   };
+  
+  this.registerPhoneButton = function () {
+    return element(by.id('register-phone'));
+  };
 };
 
 module.exports = page;
