@@ -355,9 +355,25 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+    
+    exec: {
+      'start-webdriver': {
+        command: 'node_modules/.bin/webdriver-manager start'
+      },
+      'e2e-tests': {
+        command: 'node_modules/.bin/protractor test/protractor.conf.js'
+      }
     }
   });
 
+  grunt.registerTask('webdriver', [
+    'exec:start-webdriver'
+  ]);
+  
+  grunt.registerTask('e2e', [
+    'exec:e2e-tests'
+  ]);
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
