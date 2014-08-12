@@ -18,4 +18,9 @@ describe('Home page', function () {
     expect(page.registerPhoneButton().isPresent()).toBe(true);
   });
 
+  it('should take the User to the Register New Phone screen', function() {
+    page.registerPhoneButton().click();
+    expect(protractor.getInstance().getLocationAbsUrl()).toMatch('/register-new-phone');
+  });
+
 });
