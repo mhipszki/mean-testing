@@ -18,9 +18,10 @@ module.exports = function(config) {
     files: [
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      'app/scripts/**/*.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'app/modules/**/*.js',
       'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/unit/**/*.js'
     ],
 
     // list of files / patterns to exclude
@@ -44,7 +45,12 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-mocha-reporter'
+    ],
+
+    reporters: [
+      'mocha'
     ],
 
     // Continuous Integration mode
