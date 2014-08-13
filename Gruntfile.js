@@ -44,6 +44,14 @@ module.exports = function (grunt) {
         files: ['test/unit/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
+      api: {
+        files: ['server/**/*.js'],
+        tasks: ['newer:jshint:api', 'mochacli:dev']
+      },
+      apiTest: {
+        files: ['test/server/**/*.js'],
+        tasks: ['newer:jshint:apiTest', 'mochacli:dev']
+      },
       styles: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
         tasks: ['newer:copy:styles', 'autoprefixer']
@@ -127,6 +135,18 @@ module.exports = function (grunt) {
           jshintrc: 'test/.jshintrc'
         },
         src: ['test/unit/{,*/}*.js']
+      },
+      api: {
+        options: {
+          jshintrc: 'server/.jshintrc'
+        },
+        src: ['server/**/*.js']
+      },
+      apiTest: {
+        options: {
+          jshintrc: 'test/server/.jshintrc'
+        },
+        src: ['test/server/**/*.js']
       }
     },
 
@@ -354,6 +374,25 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'test/karma.conf.js',
         singleRun: true
+      }
+    },
+
+    mochacli: {
+      options: {
+        require: ['expect.js','should'],
+        files: ['test/server/**/*.spec.js'],
+        bail: true
+      },
+      all: {
+        options: {
+          reporter: 'spec',
+          bail: false
+        }
+      },
+      dev: {
+        options: {
+          reporter: 'spec'
+        }
       }
     },
     
