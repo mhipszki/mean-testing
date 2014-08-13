@@ -13,4 +13,8 @@ angular.module('phone.registration', ['ui.router'])
 
 .controller('phone.registration', ['$scope', function($scope) {
   $scope.phone = {};
+
+  $scope.submit = function () {
+
+  };
 }]);

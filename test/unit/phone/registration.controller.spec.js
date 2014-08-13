@@ -22,6 +22,11 @@ describe('phone.registration controller', function () {
       expect(scope.phone).toBeDefined();
     });
 
+    it('should expose submit() method to scope', function() {
+      expect(scope.submit).toBeDefined();
+      expect(scope.submit instanceof Function).toBeTruthy();
+    });
+
   });
 
 });
