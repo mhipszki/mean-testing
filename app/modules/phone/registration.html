@@ -1,6 +1,35 @@
-<div>
-  <h1>Register a new Phone</h1>
-  <form>
-    <input ng-model="phone.brand" type="text"/>
-  </form>
+<div class="panel panel-default">
+  <div class="panel-heading"><strong>Register a new Phone</strong></div>
+
+  <div class="panel-body">
+
+    <form role="form" novalidate>
+
+      <div class="form-group">
+        <label class="control-label" for="phone.brand">Phone brand</label>
+        <input ng-model="phone.brand" type="text" class="form-control" placeholder="Enter phone brand">
+        <span class="help-block">e.g. Apple, Samsung, Motorola, etc.</span>
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label" for="phone.type">Phone type</label>
+        <input ng-model="phone.type" type="text" class="form-control" placeholder="Enter phone type">
+        <span class="help-block">e.g. iPhone 5S, Galaxy S5 etc.</span>
+      </div>
+      
+      <div class="form-group">
+        <label class="control-label" for="phone.imei">IMEI number</label>
+        <input ng-model="phone.imei" type="text" class="form-control" placeholder="Enter IMEI number">
+        <span class="help-block">valid IMEI number is 15 digits</span>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label" for="phone.mac">MAC address</label>
+        <input ng-model="phone.mac" type="text" class="form-control" placeholder="Enter valid MAC address">
+        <span class="help-block">valid MAC address format is 00:1A:2B:3C:4D:5F</span>
+      </div>
+      
+    </form>
+  </div>
+
 </div>
