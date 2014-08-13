@@ -14,4 +14,16 @@ ddescribe('Phone registration page', function () {
     expect(page.inputPhoneBrand.isPresent()).toBe(true);
   });
 
+  it('should have a Phone Type input field', function() {
+    expect(page.inputPhoneType.isPresent()).toBe(true);
+  });
+
+  it('should have a Phone IMEI number input field', function() {
+    expect(page.inputPhoneIMEI.isPresent()).toBe(true);
+  });
+
+  it('should have a Phone MAC address input field', function() {
+    expect(page.inputPhoneMAC.isPresent()).toBe(true);
+  });
+
 });
