@@ -18,19 +18,21 @@
   <body ng-app="meanApp">
     <!-- Add your site or application content here -->
     <ul id="navigation-bar" class="nav nav-pills">
-      <li><a id="register-phone" href="#">Register Phone</a></li>
+      <li><a id="register-phone" ui-sref="register-new-phone">Register Phone</a></li>
     </ul>
+    <div ui-view></div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    <script src="app.js"></script>
+    <script src="modules/phone/registration.js"></script>
     <!-- endbuild -->
 </body>
 </html>

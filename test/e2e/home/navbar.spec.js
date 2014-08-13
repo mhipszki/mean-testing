@@ -20,7 +20,7 @@ describe('Home page', function () {
 
   it('should take the User to the Register New Phone screen', function() {
     page.registerPhoneButton().click();
-    expect(protractor.getInstance().getLocationAbsUrl()).toMatch('/register-new-phone');
+    expect(protractor.getInstance().getLocationAbsUrl()).toMatch('/register/phone');
   });
 
 });
