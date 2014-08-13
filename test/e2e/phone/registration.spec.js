@@ -26,4 +26,8 @@ ddescribe('Phone registration page', function () {
     expect(page.inputPhoneMAC.isPresent()).toBe(true);
   });
 
+  it('should have a Submit button', function() {
+    expect(page.submitButton.isPresent()).toBe(true);
+  });
+
 });
